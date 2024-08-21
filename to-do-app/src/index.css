@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(../src/images/todobackground2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.to-do-list {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 5px 5px 15px black;
+}
+
+button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.add-button {
+  background-color: hsl(155, 67%, 50%);
+  box-shadow: 2px 2px 5px black;
+}
+
+.add-button:hover {
+  background-color: hsl(155, 67%, 40%);
+}
+
+.delete-button {
+  background-color: hsl(7, 74%, 53%);
+}
+
+.delete-button:hover {
+  background-color: hsl(7, 74%, 43%);
+}
+
+.move-button {
+  background-color: hsl(240, 56%, 53%);
+}
+
+.move-button:hover {
+  background-color: hsl(240, 56%, 43%);
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  font-size: 1.4rem;
+  padding: 8px;
+  border: 2px solid hsl(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  color: hsl(0, 0%, 0%, 0.5);
+  margin-right: 5px;
+  box-shadow: 2px 2px 5px black;
+  width: calc(50% - 10px);
+}
+
+ol {
+  padding: 0;
+}
+
+li {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 8px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 10px;
+  border: 3px solid hsl(0, 0%, 85%, 0.75);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 5px black;
+}
+
+.text {
+  flex: 1;
+}
+
+.time {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: hsl(0, 0%, 50%);
+}
+
+.delete-button,
+.move-button {
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.stop-button {
+  margin-left: 10px;
+  background-color: hsl(7, 74%, 43%);
+  box-shadow: 2px 2px 5px black;
+}
+
+.stop-button:hover {
+  background-color: hsl(7, 88%, 20%);
+}
+
+/* Media Query for screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+  .to-do-list {
+    margin-top: 50px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"] {
+    font-size: 1.4rem;
+    padding: 8px;
+    width: calc(100% - 15px);
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 8px 15px;
+  }
+
+  li {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+
+  .time {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+
+  .delete-button,
+  .move-button {
+    padding: 5px 8px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Media Query for screens smaller than 480px (small mobile devices) */
+@media (max-width: 412px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"] {
+    font-size: 1.3rem;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 7px 10px;
+  }
+
+  li {
+    font-size: 1.3rem;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .time {
+    margin-left: 0;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .delete-button,
+  .move-button {
+    padding: 5px 8px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"] {
+    font-size: 1.3rem;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 7px 10px;
+  }
+
+  li {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 8px;
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 10px;
+    border: 3px solid hsl(0, 0%, 85%, 0.75);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .time {
+    margin-left: 0;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .delete-button,
+  .move-button {
+    padding: 5px 8px;
+    font-size: 1rem;
+  }
+}
